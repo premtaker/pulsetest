@@ -70,6 +70,23 @@
   <footer>
     <p>© 2025 Pulse Service Masters | All Rights Reserved</p>
   </footer>
+<script>
+  const checkboxes = document.querySelectorAll('.warranty-checkbox');
+
+  checkboxes.forEach(box => {
+    box.addEventListener('change', function() {
+      const priceTag = this.closest('.product').querySelector('.price');
+      const basePrice = parseInt(priceTag.dataset.base);
+      const extra = parseInt(this.dataset.extra);
+
+      if (this.checked) {
+        priceTag.textContent = basePrice + extra;
+      } else {
+        priceTag.textContent = basePrice;
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
