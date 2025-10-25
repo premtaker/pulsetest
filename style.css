@@ -120,14 +120,14 @@ nav ul li a:hover {
   margin-top: 0.5rem;
   font-size: 0.95rem;
 }
-/* Slideshow */
+/* Slideshow (Fixed + Responsive) */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 900px;
   position: relative;
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .slides {
@@ -136,48 +136,61 @@ nav ul li a:hover {
 
 .slides img {
   width: 100%;
-  height: 450px;
-  object-fit: cover;
+  height: 380px;
+  object-fit: cover;      /* Keeps proportions and fills space */
   border-radius: 15px;
 }
 
 .caption {
   position: absolute;
-  bottom: 8px;
+  bottom: 12px;
   left: 16px;
   background: rgba(0,0,0,0.6);
   color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  padding: 16px;
+  padding: 12px;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   transition: 0.3s;
   user-select: none;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.4);
   border-radius: 50%;
-}
-
-.next {
-  right: 10px;
+  transform: translateY(-50%);
 }
 
 .prev {
   left: 10px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.next {
+  right: 10px;
 }
 
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .slides img {
+    height: 240px;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
 
 /* Footer */
 footer {
