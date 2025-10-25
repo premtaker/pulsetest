@@ -35,12 +35,12 @@ header {
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
   display: inline-block;
-  background-color: transparent;
 }
+
 
 header h1 {
   font-size: 1.6rem;
